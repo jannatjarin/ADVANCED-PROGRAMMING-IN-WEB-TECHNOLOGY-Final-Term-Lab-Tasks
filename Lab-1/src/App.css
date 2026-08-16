@@ -1,0 +1,183 @@
+/* background + design tokens */
+body {
+  background: #fdf6e3;
+  --card-bg: var(--bg);
+  --card-radius: 10px;
+  --card-padding: 20px;
+  --card-gap: 16px;
+  --header-bg: var(--accent-bg);
+}
+
+/* header */
+.dashboardHeader {
+  background: var(--header-bg);
+  padding: 32px 28px 20px;
+  border-radius: var(--card-radius);
+  margin: 24px auto;
+  max-width: 560px;
+  text-align: center;
+}
+
+.dashboardHeader h1 {
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+.dashboardHeader .tagline {
+  color: var(--text);
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+.navBar a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 6px 16px;
+  border-radius: 6px;
+}
+
+.navBar a:hover {
+  background: var(--bg);
+  color: var(--accent);
+}
+
+/* student list */
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+/* student card */
+.studentCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: var(--card-padding);
+  text-align: left;
+}
+
+.studentCard-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent-bg);
+  object-fit: cover;
+}
+
+.studentCard-top h2 {
+  margin: 0;
+  font-size: 17px;
+  color: var(--text-h);
+}
+
+.studentCard-top .major {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.studentId {
+  font-size: 12px;
+  color: var(--text);
+  background: var(--code-bg);
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 14px;
+}
+
+.studentCard-stats {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.studentCard-courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+/* stat badge */
+.statBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  background: var(--code-bg);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.statBadge-label {
+  font-size: 11px;
+  color: var(--text);
+  text-transform: uppercase;
+}
+
+.statBadge-value {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+/* course tag */
+.courseTag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* footer */
+.dashboardFooter {
+  text-align: center;
+  padding: 28px 20px;
+  margin-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.footerBrand {
+  font-weight: 600;
+  color: var(--text-h);
+  margin-bottom: 4px;
+}
+
+.footerText {
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.footerCopy {
+  font-size: 12px;
+  color: var(--text);
+  opacity: 0.7;
+}
