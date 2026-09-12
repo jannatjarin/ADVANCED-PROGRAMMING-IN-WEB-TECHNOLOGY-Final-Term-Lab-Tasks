@@ -1,0 +1,248 @@
+:root {
+  --primary: #aa3bff;
+  --primary-light: #f1ddff;
+  --text: #24202b;
+  --muted: #6b6375;
+  --background: #f7f5fa;
+  --card: #ffffff;
+  --border: #e5e4e7;
+  --space: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.dashboard {
+  min-height: 100vh;
+}
+
+.dashboardHeader {
+  padding: 20px 6%;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+}
+
+.dashboardHeader h2 {
+  margin: 0;
+}
+
+.dashboardHeader p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.dashboardHeader nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.dashboardHeader a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.dashboardContent {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.dashboardContent h1 {
+  margin-bottom: 5px;
+}
+
+.tagline {
+  color: var(--muted);
+}
+
+.controls {
+  margin: 30px 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.searchBar {
+  flex: 1;
+  min-width: 260px;
+
+  padding: 12px 15px;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  background: var(--card);
+  color: var(--text);
+}
+
+.sortControls {
+  display: flex;
+  gap: 8px;
+}
+
+.sortControls button {
+  padding: 9px 12px;
+
+  border: 1px solid var(--border);
+  border-radius: 8px;
+
+  background: var(--card);
+  color: var(--text);
+
+  cursor: pointer;
+}
+
+.sortControls button.active {
+  background: var(--primary);
+  color: white;
+}
+
+.studentGrid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: var(--space);
+}
+
+.studentCard {
+  background: var(--card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  padding: 22px;
+}
+
+.studentTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.studentTop img {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.studentCard h3 {
+  margin-bottom: 4px;
+}
+
+.studentCard p {
+  color: var(--muted);
+}
+
+.favoriteButton {
+  font-size: 25px;
+
+  border: 1px solid var(--border);
+
+  background: var(--card);
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.favoriteButton.favorite {
+  color: #f2a900;
+}
+
+.courses {
+  display: flex;
+
+  gap: 7px;
+
+  flex-wrap: wrap;
+
+  margin-top: 15px;
+}
+
+.courseTag {
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  background: var(--primary);
+
+  color: white;
+
+  font-size: 13px;
+}
+
+.loading {
+  min-height: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.spinner {
+  width: 45px;
+  height: 45px;
+
+  border: 5px solid var(--primary-light);
+
+  border-top-color: var(--primary);
+
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.empty {
+  text-align: center;
+
+  padding: 50px;
+}
+
+@media (max-width: 700px) {
+  .dashboardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .studentGrid {
+    grid-template-columns: 1fr;
+  }
+}
