@@ -1,0 +1,378 @@
+:root {
+  --primary: #aa3bff;
+  --primary-light: #f1ddff;
+  --text: #24202b;
+  --muted: #6b6375;
+  --background: #f7f5fa;
+  --card: #ffffff;
+  --border: #e5e4e7;
+  --space: 20px;
+  --error: #d33;
+  --success: #16823b;
+}
+
+body.dark {
+  --text: #f3f4f6;
+  --muted: #b7b1c1;
+  --background: #16171d;
+  --card: #22242c;
+  --border: #3b3d48;
+  --primary-light: #3b2350;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  background: var(--background);
+
+  color: var(--text);
+
+  font-family:
+    system-ui,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.dashboard {
+  min-height: 100vh;
+}
+
+.dashboardHeader {
+  padding: var(--space) 6%;
+
+  background: var(--card);
+
+  border-bottom:
+    1px solid var(--border);
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items: center;
+
+  gap: var(--space);
+}
+
+.dashboardHeader h2 {
+  margin: 0;
+}
+
+.dashboardHeader p {
+  margin: 4px 0 0;
+
+  color: var(--muted);
+}
+
+.dashboardHeader nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  flex-wrap: wrap;
+}
+
+.dashboardHeader a {
+  color: var(--text);
+
+  text-decoration: none;
+}
+
+.dashboardHeader button,
+.sortControls button,
+.favoriteButton,
+.removeButton {
+  border:
+    1px solid var(--border);
+
+  background: var(--card);
+
+  color: var(--text);
+
+  padding: 9px 12px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.dashboardContent {
+  width: min(1100px, 92%);
+
+  margin: 0 auto;
+
+  padding: 40px 0;
+}
+
+.dashboardContent h1 {
+  margin-bottom: 5px;
+}
+
+.tagline {
+  color: var(--muted);
+}
+
+.controls {
+  margin: 30px 0;
+
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+}
+
+.searchBar {
+  flex: 1;
+
+  min-width: 260px;
+
+  padding: 12px 15px;
+
+  border:
+    1px solid var(--border);
+
+  background: var(--card);
+
+  color: var(--text);
+
+  border-radius: 8px;
+
+  font-size: 16px;
+}
+
+.sortControls {
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+.sortControls button.active {
+  background: var(--primary);
+
+  color: white;
+}
+
+.studentGrid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap: var(--space);
+}
+
+.studentCard {
+  background: var(--card);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 12px;
+
+  padding: 22px;
+
+  box-shadow:
+    0 4px 12px
+    rgba(0, 0, 0, 0.06);
+}
+
+.studentTop {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  align-items:
+    flex-start;
+}
+
+.studentTop img {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+}
+
+.favoriteButton {
+  font-size: 22px;
+}
+
+.favoriteButton.favorite {
+  color: #f2a900;
+}
+
+.removeButton {
+  margin-left: 5px;
+}
+
+.studentCard h3 {
+  margin-bottom: 4px;
+}
+
+.studentCard p {
+  color: var(--muted);
+}
+
+.stats {
+  display: flex;
+
+  gap: 10px;
+
+  margin: 18px 0;
+}
+
+.statBadge {
+  padding: 9px 12px;
+
+  border-radius: 8px;
+
+  background:
+    var(--primary-light);
+
+  display: flex;
+
+  gap: 8px;
+}
+
+.statBadge strong {
+  color: var(--primary);
+}
+
+.courses {
+  display: flex;
+
+  gap: 7px;
+
+  flex-wrap: wrap;
+}
+
+.courseTag {
+  color: white;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 13px;
+
+  background:
+    var(--primary);
+}
+
+.empty {
+  text-align: center;
+
+  padding: 50px;
+}
+
+.formSection {
+  margin-top: 45px;
+
+  padding: 25px;
+
+  background: var(--card);
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 12px;
+}
+
+.formSection form {
+  display: grid;
+
+  gap: 15px;
+}
+
+.formSection label {
+  display: grid;
+
+  gap: 6px;
+
+  text-align: left;
+}
+
+.formSection input {
+  padding: 11px;
+
+  border:
+    1px solid var(--border);
+
+  border-radius: 7px;
+
+  background: var(--background);
+
+  color: var(--text);
+}
+
+.error {
+  color: var(--error);
+
+  font-size: 14px;
+}
+
+.success {
+  margin-bottom: 15px;
+
+  padding: 10px;
+
+  color: var(--success);
+
+  background: #dff5e7;
+
+  border-radius: 7px;
+}
+
+.submitButton {
+  width: fit-content;
+
+  border: 0;
+
+  padding: 11px 18px;
+
+  border-radius: 8px;
+
+  background: var(--primary);
+
+  color: white;
+
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .dashboardHeader {
+    flex-direction: column;
+
+    align-items:
+      flex-start;
+  }
+
+  .studentGrid {
+    grid-template-columns: 1fr;
+  }
+}
